@@ -7,17 +7,12 @@
 <title>Himanshu Borkar — CV</title>
 <meta name="description" content="Himanshu Rajnish Borkar — B.Tech Electrical Engineering, IIT Madras. Incoming MS ECE, UC San Diego. Gate sizing, glitch behaviour, hardware security and in-memory computing.">
 
-<!-- Link preview (LinkedIn, WhatsApp, email clients) -->
+<!-- Link preview -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Himanshu Borkar's CV">
 <meta property="og:description" content="B.Tech Electrical Engineering, IIT Madras. Incoming MS ECE, UC San Diego. I work on gate sizing, timing and glitch behaviour, hardware security and in-memory computing.">
 <meta property="og:url" content="https://vervypotato.github.io/">
-<!-- Drop a square-ish image in the repo and uncomment for a thumbnail in previews:
-<meta property="og:image" content="https://vervypotato.github.io/assets/preview.png"> -->
 <meta name="twitter:card" content="summary">
-
-<!-- Add favicon.png to the repo root and uncomment:
-<link rel="icon" type="image/png" href="favicon.png"> -->
 
 <style>
   :root {
@@ -35,9 +30,13 @@
     --shell: 920px;
   }
 
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 
-  html { -webkit-text-size-adjust: 100%; }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
 
   body {
     margin: 0;
@@ -47,9 +46,21 @@
     line-height: 1.6;
   }
 
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
 
   .wrap {
     width: 100%;
@@ -58,9 +69,12 @@
     padding: 0 1.25rem;
   }
 
-  /* ---------- header ---------- */
 
-  header { padding: 1.75rem 0 1.25rem; }
+  /* ---------- HEADER ---------- */
+
+  header {
+    padding: 1.75rem 0 1.25rem;
+  }
 
   .name {
     font-size: 1.22rem;
@@ -68,11 +82,13 @@
     letter-spacing: -0.01em;
     margin: 0;
   }
+
   .role {
     color: var(--muted);
     font-size: 0.92rem;
     margin: 0.2rem 0 1rem;
   }
+
   .links {
     display: flex;
     flex-wrap: wrap;
@@ -80,17 +96,26 @@
     font-family: var(--mono);
     font-size: 0.8rem;
   }
-  .links a { color: var(--muted); }
-  .links a:hover { color: var(--accent); }
 
-  /* ---------- pdf viewer (desktop) ---------- */
+  .links a {
+    color: var(--muted);
+  }
+
+  .links a:hover {
+    color: var(--accent);
+  }
+
+
+  /* ---------- PDF VIEWER ---------- */
 
   #viewer-frame {
     background: #fff;
     border-radius: 3px;
     box-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
     overflow: hidden;
+    width: 100%;
   }
+
   #viewer-frame iframe {
     display: block;
     width: 100%;
@@ -98,48 +123,70 @@
     min-height: 560px;
     border: 0;
   }
+
   @supports (height: 100dvh) {
-    #viewer-frame iframe { height: calc(100dvh - 190px); }
+    #viewer-frame iframe {
+      height: calc(100dvh - 190px);
+    }
   }
+
+
+  /* ---------- PDF ACTIONS ---------- */
 
   .viewer-actions {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 1.2rem;
     font-family: var(--mono);
     font-size: 0.78rem;
-    padding: 0.6rem 0 0;
+    padding: 0.65rem 0 0;
   }
-  .viewer-actions a { color: var(--muted); }
-  .viewer-actions a:hover { color: var(--accent); }
 
-  /* ---------- mobile card ---------- */
+  .viewer-actions a {
+    color: var(--muted);
+  }
+
+  .viewer-actions a:hover {
+    color: var(--accent);
+  }
+
+
+  /* ---------- MOBILE FALLBACK ---------- */
 
   #mobile-card {
     display: none;
     background: var(--bg-raise);
     border: 1px solid var(--rule);
     border-radius: 6px;
-    padding: 2rem 1.5rem 2.25rem;
+    padding: 1.25rem 1rem;
+    margin-top: 0.9rem;
     text-align: center;
   }
+
   #mobile-card p {
     color: var(--muted);
-    font-size: 0.92rem;
-    margin: 0 0 1.5rem;
+    font-size: 0.85rem;
+    margin: 0 0 1rem;
   }
+
   .button {
     display: inline-block;
     background: var(--accent-hi);
     color: #fff;
     font-weight: 600;
-    font-size: 0.95rem;
-    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.25rem;
     border-radius: 5px;
   }
-  .button:hover { background: #B03F7A; text-decoration: none; }
 
-  /* ---------- contact ---------- */
+  .button:hover {
+    background: #B03F7A;
+    text-decoration: none;
+  }
+
+
+  /* ---------- CONTACT ---------- */
 
   .contact {
     border-top: 1px solid var(--rule);
@@ -147,12 +194,14 @@
     padding: 1.5rem 0 3rem;
     font-size: 0.9rem;
   }
+
   .contact dl {
     display: grid;
     grid-template-columns: 8.5rem 1fr;
     gap: 0.55rem 1rem;
     margin: 0;
   }
+
   .contact dt {
     font-family: var(--mono);
     font-size: 0.74rem;
@@ -161,73 +210,314 @@
     color: var(--muted);
     padding-top: 0.15rem;
   }
-  .contact dd { margin: 0; }
 
-  /* ---------- responsive ---------- */
+  .contact dd {
+    margin: 0;
+  }
+
+
+  /* ---------- TABLET ---------- */
+
+  @media only screen and (max-width: 900px) {
+
+    .wrap {
+      padding: 0 1rem;
+    }
+
+    #viewer-frame iframe {
+      height: 80vh;
+      min-height: 560px;
+    }
+
+    @supports (height: 100dvh) {
+      #viewer-frame iframe {
+        height: 80dvh;
+      }
+    }
+  }
+
+
+  /* ---------- MOBILE ---------- */
 
   @media only screen and (max-width: 768px) {
-    #viewer-frame, .viewer-actions { display: none; }
-    #mobile-card { display: block; }
-    .contact dl { grid-template-columns: 1fr; gap: 0.1rem; }
-    .contact dt { padding-top: 0.75rem; }
+
+    .wrap {
+      padding: 0 0.75rem;
+    }
+
+    header {
+      padding: 1.25rem 0 1rem;
+    }
+
+    .name {
+      font-size: 1.1rem;
+    }
+
+    .role {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      margin-bottom: 0.8rem;
+    }
+
+    .links {
+      font-size: 0.72rem;
+      gap: 0.35rem 0.9rem;
+    }
+
+
+    /*
+     * Keep the PDF visible on mobile.
+     *
+     * 75vh is the fallback.
+     * 75dvh accounts for mobile browser address bars.
+     */
+
+    #viewer-frame {
+      display: block;
+      border-radius: 2px;
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    #viewer-frame iframe {
+      display: block;
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      border: 0;
+    }
+
+    @supports (height: 100dvh) {
+      #viewer-frame iframe {
+        height: 75dvh;
+      }
+    }
+
+
+    /*
+     * Keep the open/download controls visible.
+     */
+
+    .viewer-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 0.7rem 0 0;
+      font-size: 0.72rem;
+    }
+
+
+    /*
+     * Show an additional mobile fallback.
+     *
+     * Some mobile browsers don't render PDFs inside iframes.
+     * In those browsers, "Open PDF" opens the browser's native
+     * PDF viewer instead.
+     */
+
+    #mobile-card {
+      display: block;
+    }
+
+
+    .contact {
+      margin-top: 1.5rem;
+      padding-bottom: 2rem;
+    }
+
+    .contact dl {
+      grid-template-columns: 1fr;
+      gap: 0.1rem;
+    }
+
+    .contact dt {
+      padding-top: 0.75rem;
+    }
   }
+
+
+  /* ---------- VERY SMALL PHONES ---------- */
+
+  @media only screen and (max-width: 400px) {
+
+    .wrap {
+      padding: 0 0.5rem;
+    }
+
+    .name {
+      font-size: 1rem;
+    }
+
+    .role {
+      font-size: 0.78rem;
+    }
+
+    #viewer-frame iframe {
+      height: 70vh;
+      min-height: 450px;
+    }
+
+    @supports (height: 100dvh) {
+      #viewer-frame iframe {
+        height: 70dvh;
+      }
+    }
+
+    .viewer-actions {
+      gap: 1rem;
+      font-size: 0.68rem;
+    }
+
+    #mobile-card {
+      padding: 1rem 0.75rem;
+    }
+  }
+
 </style>
 </head>
+
+
 <body>
 
 <div class="wrap">
 
+  <!-- ================= HEADER ================= -->
+
   <header>
-    <h1 class="name">Himanshu Rajnish Borkar</h1>
-    <p class="role">Digital VLSI &amp; EDA · B.Tech, IIT Madras · Incoming MS ECE, UC San Diego</p>
+
+    <h1 class="name">
+      Himanshu Rajnish Borkar
+    </h1>
+
+    <p class="role">
+      Digital VLSI &amp; EDA · B.Tech, IIT Madras · Incoming MS ECE, UC San Diego
+    </p>
+
     <nav class="links" aria-label="Profiles">
-      <a href="https://github.com/vervypotato">github</a>
-      <a href="https://linkedin.com/in/himanshu-borkar-65609924b">linkedin</a>
-      <a href="mailto:hborkar@ucsd.edu">email</a>
+
+      <a href="https://github.com/vervypotato">
+        github
+      </a>
+
+      <a href="https://linkedin.com/in/himanshu-borkar-65609924b">
+        linkedin
+      </a>
+
+      <a href="mailto:hborkar@ucsd.edu">
+        email
+      </a>
+
     </nav>
+
   </header>
 
-  <!-- ===================================================================
-       THE CV.  To update: export your LaTeX to a PDF named exactly
-       Himanshu_Borkar_CV.pdf, drop it in the repo root replacing the old
-       one, and commit.  No edits needed in this file.
 
-       If the old version still shows after a push, that is browser
-       caching — bump ?v=1 to ?v=2 in the three places below.
-       =================================================================== -->
+  <!-- ================= CV ================= -->
 
   <main>
+
     <div id="viewer-frame">
-      <iframe src="HimanshuCV_Research2.pdf?v=1"
-              title="Himanshu Borkar's CV"
-              type="application/pdf"></iframe>
+
+      <!--
+        IMPORTANT:
+        Make sure this exact PDF filename exists in your repository.
+      -->
+
+      <iframe
+        src="HimanshuCV_Research2.pdf?v=2"
+        title="Himanshu Borkar's CV"
+        type="application/pdf">
+      </iframe>
+
     </div>
+
+
+    <!-- Desktop + mobile controls -->
 
     <div class="viewer-actions">
-      <a href="Himanshu_Borkar_CV.pdf?v=1" target="_blank" rel="noopener">open in new tab ↗</a>
-      <a href="Himanshu_Borkar_CV.pdf?v=1" download>download</a>
+
+      <a
+        href="HimanshuCV_Research2.pdf?v=2"
+        target="_blank"
+        rel="noopener">
+        open PDF ↗
+      </a>
+
+      <a
+        href="HimanshuCV_Research2.pdf?v=2"
+        download>
+        download
+      </a>
+
     </div>
+
+
+    <!--
+      Mobile fallback.
+
+      This remains visible on mobile even if the iframe works.
+      If the browser doesn't support inline PDFs, the user can
+      open the PDF using the browser's native PDF viewer.
+    -->
 
     <div id="mobile-card">
-      <p>Your browser can't display the CV inline on a small screen.</p>
-      <a class="button" href="Himanshu_Borkar_CV.pdf?v=1" target="_blank" rel="noopener">Open CV (PDF)</a>
+
+      <p>
+        If the PDF does not display correctly in your browser,
+        open it directly:
+      </p>
+
+      <a
+        class="button"
+        href="HimanshuCV_Research2.pdf?v=2"
+        target="_blank"
+        rel="noopener">
+        Open CV (PDF)
+      </a>
+
     </div>
+
   </main>
 
+
+  <!-- ================= CONTACT ================= -->
+
   <section class="contact">
+
     <dl>
+
       <dt>Email</dt>
-      <dd><a href="mailto:hborkar@ucsd.edu">hborkar@ucsd.edu</a></dd>
+      <dd>
+        <a href="mailto:hborkar@ucsd.edu">
+          hborkar@ucsd.edu
+        </a>
+      </dd>
+
 
       <dt>Personal</dt>
-      <dd><a href="mailto:himanshuborkar04@gmail.com">himanshuborkar04@gmail.com</a></dd>
+      <dd>
+        <a href="mailto:himanshuborkar04@gmail.com">
+          himanshuborkar04@gmail.com
+        </a>
+      </dd>
+
 
       <dt>GitHub</dt>
-      <dd><a href="https://github.com/vervypotato">github.com/vervypotato</a></dd>
+      <dd>
+        <a href="https://github.com/vervypotato">
+          github.com/vervypotato
+        </a>
+      </dd>
+
 
       <dt>LinkedIn</dt>
-      <dd><a href="https://linkedin.com/in/himanshu-borkar-65609924b">himanshu-borkar-65609924b</a></dd>
+      <dd>
+        <a href="https://linkedin.com/in/himanshu-borkar-65609924b">
+          himanshu-borkar-65609924b
+        </a>
+      </dd>
+
     </dl>
+
   </section>
 
 </div>
